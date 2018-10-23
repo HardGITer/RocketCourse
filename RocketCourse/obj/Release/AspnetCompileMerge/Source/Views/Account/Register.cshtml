@@ -1,0 +1,108 @@
+﻿@model RocketCourse.Models.RegisterModel
+
+
+@using (Html.BeginForm("Register", "Account", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+
+    //
+
+    <section class="BackImgRegister clearfix">
+        <div class="container clearfix">
+            <div class="registerBoard clearfix">
+                <p>Регистрация</p>
+                <div>
+                    <p style="font-size:12px; padding-bottom:5px; margin-bottom: 0px">Имя</p>
+                    @Html.EditorFor(model => model.Name, new { htmlAttributes = new { @class = "form-control" } })
+                </div>
+                <div>
+                    <p style="font-size:12px; padding-bottom:5px; margin-bottom: 0px">Возраст</p>
+                    @Html.EditorFor(model => model.Age, new { htmlAttributes = new { @class = "form-control" } })
+                </div>
+                <div>
+                    <p style="font-size:12px; padding-bottom:5px; margin-bottom: 0px">Почта</p>
+                    @Html.EditorFor(model => model.Mail, new { htmlAttributes = new { @class = "form-control" } })
+                </div>
+                <div>
+                    <p style="font-size:12px; padding-bottom:5px; margin-bottom: 0px">Телефон</p>
+                    @Html.EditorFor(model => model.Phone, new { htmlAttributes = new { @class = "form-control" } })
+                </div>
+                <div>
+                    <p style="font-size:12px; padding-bottom:5px; margin-bottom: 0px">Пароль</p>
+                    @Html.PasswordFor(model => model.Password, new { htmlAttributes = new { @class = "form-control" } })
+                </div>
+                <p style="font-size:12px; padding-bottom:5px; margin-bottom: 0px">Фото</p>
+                <div class="editor-field">
+                    <input type="file" id="uploadImage" name="uploadImage" />
+                </div>
+                <input type="submit" value="Создать" class="SubmitButton" />
+                <br />
+                @Html.ActionLink("Войти", "Login", "Account")
+            </div>
+
+        </div>
+    </section>
+
+    //
+
+    @*<div class="form-horizontal">
+        <h4>RegisterModel</h4>
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        <div class="form-group">
+            @Html.LabelFor(model => model.Name, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Name, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Name, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Age, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Age, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Age, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Mail, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Mail, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Mail, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Phone, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Phone, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Phone, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Password, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.PasswordFor(model => model.Password, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Password, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="editor-label">Файл изображения</div>
+        <div class="editor-field">
+            <input type="file" id="uploadImage" name="uploadImage" />
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </div>
+    </div>*@
+}
+
+@*<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>*@

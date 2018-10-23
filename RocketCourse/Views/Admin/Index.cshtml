@@ -1,0 +1,20 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>@ViewBag.CourseId</h2>
+
+@Html.Action("GetUsers")
+@Html.ActionLink("Добавить пользователя", "AddUser")
+<hr />
+@Html.Action("GetGroups")
+@*@Html.Action("AddGroup")*@
+@Html.ActionLink("добавить группу", "AddGroup")
+<hr />
+@Html.Action("GetCourses")
+@*@Html.Action("AddCourse")*@
+@Html.ActionLink("добавить курс", "AddCourse")
+<hr />
+@Html.Action("GetOrderedCourses")
+

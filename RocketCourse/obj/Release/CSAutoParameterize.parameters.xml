@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="CourseContext-Web.config Connection String" description="CourseContext Строка подключения в web.config, используемая приложением для доступа к базе данных." defaultValue="Data Source=SQL6005.site4now.net;Initial Catalog=DB_A3F914_coursedb;User Id=DB_A3F914_coursedb_admin;Password=zaq123456;" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="D:\\MVC\\RocketCourse\\RocketCourse\\RocketCourse\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='CourseContext']/@connectionString" />
+  </parameter>
+</parameters>

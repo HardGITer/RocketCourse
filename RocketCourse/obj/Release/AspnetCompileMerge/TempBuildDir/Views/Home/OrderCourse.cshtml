@@ -1,0 +1,45 @@
+﻿@model RocketCourse.Models.Course
+
+@{
+    ViewBag.Title = "OrderCourse";
+}
+<section class="BackImgOrderCourse clearfix">
+    <h2>Спасибо за заказ курса @ViewBag.CourseName</h2>
+    <p>Наш менеджер свяжится с вами в ближайшее время для подтверждения информации</p>
+    <p>Информация о курсе:</p>
+    <div>
+        <dl class="dl-horizontal">
+            <dt>
+                @*@Html.DisplayNameFor(model => model.Name)*@
+                Название курса
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Name)
+            </dd>
+
+            <dt>
+                @*@Html.DisplayNameFor(model => model.Duration)*@
+                Продолжительность
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Duration)
+            </dd>
+
+            <dt>
+                @*@Html.DisplayNameFor(model => model.Cost)*@
+                Цена курса
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Cost)
+            </dd>
+
+        </dl>
+    </div>
+    <p style="margin-top:30px">
+        @Html.ActionLink("На главную", "Index", "Home")
+    </p>
+
+</section>

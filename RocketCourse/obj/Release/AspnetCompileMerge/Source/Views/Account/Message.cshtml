@@ -1,0 +1,26 @@
+﻿@model IEnumerable<RocketCourse.Models.Message>
+
+@*<table class="table">*@
+<section class="clearfix" style="width:500px;">
+    @foreach (var item in Model)
+    {
+        <section class="typeBoard clearfix" style="display:inline; width:500px">
+            @*<tr>
+                <td>*@
+            @*@Html.DisplayFor(modelItem => item.Time)*@
+            <p style="color:black; text-align:left; font-size:12px; margin-left:5px; padding-top:0px; margin-top:0px">@item.User.Name</p>
+            @*</td>
+                <td>*@
+            @*@Html.DisplayFor(modelItem => item.Content)*@
+            <p style="color:black; text-align:left; font-size:10px; margin-left:5px; padding-top:0px; margin-top:0px">@item.Time.Day.@item.Time.Month.@item.Time.Year  @item.Time.Hour:@item.Time.Minute</p>
+            @*</td>
+                <td>*@
+            @*@Html.DisplayFor(modelItem => item.User.Name)*@
+            <p style="color:black; text-align:left; font-size:14px; margin-left:5px; padding-bottom:0px; margin-bottom:0px">@item.Content</p>
+            @*</td>
+                </tr>*@
+        </section>
+    }
+</section>
+
+@*</table>*@
